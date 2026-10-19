@@ -1,0 +1,95 @@
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+NAME  : KAMMARI PAVAN KUMAR
+DATE  : 15-09-2026
+
+PROJECT TITLE : MINISHELL
+--------------------------------------------------------------------------------------------------------------------------------------------
+PROJECT INFO : 
+-> Mini Shell is a simple commmand-line interpreter to demonstrate the basic concepts of operating systems and Linux process management.
+-> The shell accepts commands from the user, identifies whether they are built-in or external commands, and executes them accordingly. 
+-> It also supports process control features such as pipes, foreground/background execution, signals, and stopped-job management.
+
+-> The main objective of this project is to implement a basic Linux shell uisng C.
+-> To understand and use the system calls w.r.t process creation, signal handling, process synchronization, exit status, text parsing etc..
+-> In this project, execution of Internal and external commands can be done and also it implements inter process communication using pipes.
+-> Signal handling such as SIGINT, SIGTSTP, and SIGCHLD along with basic job control using jobs, fg, bg. 
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Sample Exceution :
+
+1. minishell$: ls
+   a.out  documentation.txt  external_command.txt  main.c  main.h
+
+2. minishell$: echo $$
+   1089
+
+3. minishell$: pwd
+   /home/pavan/Linux_Internal/PROJECT1
+
+4. minishell$: echo $?
+   0
+   
+5. minishell$: mkdir Test
+   minishell$: cd Test
+
+6. minishell$: pwd
+   /home/pavan/Linux_Internal/PROJECT1/Test
+
+7. minishell$: cd ..
+   minishell$: pwd
+   /home/pavan/Linux_Internal/PROJECT1
+
+8. minishell$: ls -l
+   total 64
+   drwxr-xr-x 2 pavan pavan  4096 Aug 23 06:59 Test
+   -rwxr-xr-x 1 pavan pavan 26744 Aug 23 06:56 a.out
+   -rw-r--r-- 1 pavan pavan  1748 Aug 23 07:01 documentation.txt
+   -rw-r--r-- 1 pavan pavan  1301 Aug 10 03:49 external_command.txt
+   -rw-r--r-- 1 pavan pavan 18269 Aug 23 06:56 main.c
+   -rw-r--r-- 1 pavan pavan  2396 Aug 18 12:58 main.h
+
+9. minishell$: ls -l | wc -l
+   7
+
+10. minishell$: ls | wc
+      6       6      64
+11. minishell$: ls -l | grep .c | wc
+      3      27     178
+
+12. minishell$: ps aux | grep bash | wc -l
+    3
+
+13. minishell$: sleep 20
+    ^Z
+    minishell$: jobs
+    [1]+  Stopped 763 sleep 20
+    minishell$: bg
+    [763]+ Running sleep 20 &
+    minishell$: fg
+    ^C
+    minishell$:  
+
+14. minishell$: date
+    Tue Sep 15 04:22:23 UTC 2026
+
+15. minishell$: PS1 = pa1
+    NO_COMMAND
+
+16. minishell$: PS1=helo world
+    invalid
+
+17. minishell$: PS1=pavan
+    pavan: exit
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+Conclusion :-
+
+The Mini Shell project provides practical knowledge of Linux system programming, process management,
+inter-process communication, signal handling, and job control.
+It demonstrates how a basic command interpreter works internally and 
+provides a foundation for understanding more advanced shell implementations.
+--------------------------------------------------------------------------------------------------------------------------------------------
